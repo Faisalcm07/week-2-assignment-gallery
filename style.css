@@ -1,0 +1,19 @@
+.thumbnails {display: flex; 
+height: 20vh;
+width: 40vw;
+overflow-x : scroll;
+overflow-y: hidden;
+position: absolute;
+left: 30%;
+z-index: 100;}
+
+.display img {object-fit: cover;
+height: 100vh;
+width: 100%;}
+
+*{margin:0px;
+padding: 0px;
+box-sizing: border-box;}
+
+
+
