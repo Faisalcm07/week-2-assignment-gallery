@@ -1,19 +1,69 @@
 .thumbnails {display: flex; 
+justify-content:flex-start;
 height: 20vh;
 width: 40vw;
 overflow-x : scroll;
 overflow-y: hidden;
 position: absolute;
 left: 30%;
-z-index: 100;}
+z-index: 1;
+color-scheme: dark ;}
 
 .display img {object-fit: cover;
 height: 100vh;
-width: 100%;}
+width: 100%;
+overflow: hidden;}
+
+body{overflow: hidden;}
 
 *{margin:0px;
 padding: 0px;
 box-sizing: border-box;}
+
+.toggleButton {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    bottom: 50%;
+    border:rgba(245, 245, 220, 0.641) solid 2px;
+    color:beige;
+    background-color: rgba(245, 238, 238, 0.123);
+    z-index: 100;
+    position: absolute;
+    padding: 10px;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+
+
+}
+
+#next {right: 10px;}
+
+#prev {left :10px;}
+
+
+
+@media (width <=600px){
+
+ .thumbnails{height:8vh;
+    width: 35vw;}
+
+    .toggleButton{
+
+        height: 3vh;
+        width: 3vh;
+
+
+    }
+
+}
+   
+
+
+
 
 
 

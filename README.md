@@ -1,1 +1,3 @@
 # week-2-assignment-gallery
+
+This weeks assignment was more challenging. I didnt find the html or the css that difficult, but getting the logic right for the javascript functions was much more challenging and took me several hours and a lot of research to get correct. In the end, i managed to meet all of the requirements and even added some buttons, but i didnt get a chance to hide the thumbnails from the screen to improve the view of the display, or to have the images transition more smoothly. 

@@ -3,6 +3,8 @@ console.log("hello world!")
 const thumbnails = document.querySelector(".thumbnails")
 const display = document.querySelector(".display")
 
+currentIndex = 0
+
 const images = [{src: `https://plus.unsplash.com/premium_photo-1664299195833-da39fd653a00?q=80&w=1257&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D`,
                  alt: `A red fox`},
 
@@ -20,7 +22,7 @@ const images = [{src: `https://plus.unsplash.com/premium_photo-1664299195833-da3
                  
 ]
 
-function createThumbnails( ){images.forEach(function(image) {
+function createThumbnails( ){images.forEach(function(image, index) {
         const imgElement = document.createElement('img')
         imgElement.src = image.src
         imgElement.alt = image.alt
@@ -29,7 +31,10 @@ function createThumbnails( ){images.forEach(function(image) {
 
         imgElement.addEventListener("click", function (){
             console.log(image)
-            createDisplayImage(image)
+
+            currentIndex = index
+
+            createDisplayImage(images[currentIndex])
         })
     })
 
@@ -48,7 +53,28 @@ function createDisplayImage (imgdata){
      display.append(displayImage)
 }
 
-createDisplayImage(images[0]);
+createDisplayImage(images[currentIndex]);
+
+function ChangeImage (nextImg) {
+
+    currentIndex += nextImg
+
+    if (currentIndex < 0 ){
+        currentIndex = images.length -1 
+    }
+
+    if (currentIndex >= images.length) {
+        currentIndex = 0}
+    
+    createDisplayImage(images[currentIndex]);
+
+    }
+
+    document.getElementById("next").addEventListener("click", function(){ChangeImage(1)})
+    document.getElementById("prev").addEventListener("click", function(){ChangeImage(-1)})
+
+
+
 
 
 
